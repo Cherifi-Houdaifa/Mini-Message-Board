@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 #{title} Made By 
+    a(href="https://github.com/Cherifi-Houdaifa") NotHoudaifa 
+  h3 Welcome to #{title}
+  h3
+    a(href="/new") Create A message 
+  hr
+  section 
+    each message in messages
+      div
+        p Message Created By #{message.user} on #{message.added}
+        
+        p(style="font-size: 18px;")= message.text
+      hr        

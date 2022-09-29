@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  h3 Create A Message
+  form(action="/new" method="POST")
+    label
+      span(style="font-size: 18px;") Creator's Name
+      br
+      input(type="text" placeholder="Name" name="username")
+    hr
+    label
+      span(style="font-size: 18px;") Message Text
+      br
+      textarea(cols="60", rows="15", name="messagetext")
+    br
+    button(type="submit") Create Message
+    
+
